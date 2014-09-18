@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp" >
+
+    <ListView
+        android:id="@+id/HomeListView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/MyFormsRelativeTopBar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#66FF33"
+        android:textStyle="bold" android:fitsSystemWindows="true" >
+    </ListView>
+
+    <View
+        android:id="@+id/HomeViewTitleBottomOvalSolid"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/oval_solid_bottom" >
+    </View>
+
+    <View
+        android:id="@+id/HomeViewTitleBottomOvalGradient"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/HomeViewTitleBottomOvalSolid"
+        android:background="@drawable/oval_gradient_bottom" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/MyFormsRelativeTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bar_background" >
+
+        <View
+            android:id="@+id/MyFormsViewTitleTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MyFormsViewTitleCenter"
+            android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle_gradient_top" >
+        </View>
+
+        <View
+            android:id="@+id/MyFormsViewTitleCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" >
+        </View>
+
+        <View
+            android:id="@+id/ViewTitlebelow "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+            android:layout_below="@+id/MyFormsViewTitleCenter"
+            android:background="@drawable/rectangle_gradient_bottom" >
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeIconTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+
+            <TextView
+                android:id="@+id/HomeTextViewTitle"
+                style="@style/TextStyle.SingleLine.TitleBarBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="RIDEPAD"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/HomeListItemRelativeLayoutSeperator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="@color/list_seperator_background" >
+
+        <TextView
+            android:id="@+id/HomeListItemTesxtViewSeperator"
+            style="@style/TextStyle.SingleLine.HomeItemSeperator"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="MENU" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

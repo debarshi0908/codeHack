@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+	<string name="app_name">RIDEPAD</string>
+	<string name="my_forms_title">Queries()</string>
+	<string name="driver_serch_activity_title">NCIC form</string>
+	<string name="select_query">Select a query to reveal its responses</string>
+	<string name="driver_search_query">Driver License Query - DQ</string>
+	<string name="vehicle_search_query">Tag Registartion Query - RQ</string>
+	<string name="title_search_query">Title Search - RT</string>
+	<string name="boat_search_query">Boat Registration Search - BQ</string>
+	<string name="wanted_person_search_query">Wanted Person Search - QW</string>
+	<string name="stolen_firearm_search_query">Stolen Firearm Search - QG</string>
+	<string name="stolen_article_search_query">Stolen Article Search - QA</string>
+	<string name="hazmat_search_query">Hazardous Materials Query - MQ</string>
+	<string name="lpr_search_query">License Plate Reader Search-RQ</string>
+	<string name="my_forms_context_item_delete">Delete Form</string>
+	<string name="my_forms_context_item_cancel">Cancel</string>
+	<string name="my_stats_title">My Stats</string>
+	<string name="find_forms_title">Find Forms</string>
+	<string name="progress_text">Loading...</string>
+	<string name="search_bar_hint">Quick Search</string>
+	<string name="state_name">Al</string>
+	<string name="about_text">
+	RIDEPAD.
+	
+	\n\n Ridepad is a car pooling app for .....
+	
+	
+	\n\nAziz
+	\nPh.D. Graduate Student
+	\nComputer Science, University of Alabama
+	
+	\n\nPrateek Bahri
+	\nPh.D. Graduate Student
+	\nComputer Science, University of Alabama
+	
+	
+	\n\nDebo
+	\nPh.D. Graduate Student
+    \nComputer Science, University of Alabama
+	
+	
+	
+</string>
+	</resources>

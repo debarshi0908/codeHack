@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<RelativeLayout android:layout_alignParentTop="true"
+		android:id="@+id/MyFormsRelativeTopBar" android:layout_width="fill_parent"
+		android:layout_height="@dimen/title_bar_height" android:background="@color/title_bar_background">
+
+		<View android:layout_above="@+id/MyFormsViewTitleCenter"
+			android:id="@+id/MyFormsViewTitleTop" android:layout_width="fill_parent"
+			android:background="@drawable/rectangle_gradient_top"
+			android:layout_alignParentTop="true" android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/MyFormsViewTitleCenter"></View>
+		<View android:layout_width="wrap_content"
+			android:layout_centerVertical="true" android:id="@+id/MyFormsViewTitleCenter"
+			android:layout_height="0dp"></View>
+		<View android:layout_below="@+id/MyFormsViewTitleCenter"
+			android:id="@+id/ViewTitlebelow " android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+			android:background="@drawable/rectangle_gradient_bottom"></View>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/MyFormsRelativeIconTitle"
+			android:layout_centerInParent="true">
+			<TextView android:layout_centerHorizontal="true"
+				android:layout_marginBottom="20dp" android:id="@+id/HomeTextViewTitle"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:text="Friend Requests" style="@style/TextStyle.SingleLine.TitleBarBig"  android:textColor="#66FF33"
+                android:textStyle="bold"></TextView>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+	
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_below="@+id/MyFormsRelativeTopBar"
+		android:id="@+id/MyFormsRelativeProgressContainer">
+
+		<Spinner android:id="@+id/invitedfriends" android:layout_marginLeft="7dp"
+			android:layout_marginRight="5dp" android:layout_marginTop="10dp"
+			android:layout_width="305dp" android:layout_height="wrap_content"
+			 />
+		<Button android:id="@+id/loginbtn" android:layout_below="@id/spinner2"
+			android:layout_marginLeft="10dp" android:layout_marginTop="150dp"
+			android:layout_height="wrap_content" android:layout_width="140dp"
+			android:text="Accept" android:onClick="offer_onclick" />
+		<Button android:id="@+id/clearbtn" android:layout_below="@id/spinner2"
+			android:layout_marginLeft="170dp" android:layout_marginTop="150dp"
+			android:layout_height="wrap_content" android:layout_width="140dp"
+			android:text="Decline" android:onClick="selfDestruct" />
+
+
+	</RelativeLayout>
+
+</RelativeLayout>
+
+ 

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/icontext"
+        android:title="addmember"
+        android:icon="@drawable/n_add" />
+     <item android:id="@+id/icontext1"
+        android:title="map"
+        android:icon="@drawable/n_map" /> 
+	 <item android:id="@+id/icontext2"
+        android:title="Refresh"
+        android:icon="@drawable/n_refresh" />
+     <item android:id="@+id/icontext3"
+        android:title="logout"
+        android:icon="@drawable/n_logout" /> 
+</menu>

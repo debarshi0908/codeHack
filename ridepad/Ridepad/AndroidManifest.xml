@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="org.hci.ridepad" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:theme="@android:style/Theme.NoTitleBar">
+		<activity android:name=".SplashActivity" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	
+		<activity android:name=".AndroidclientActivity" android:label="@string/app_name"></activity>
+		<activity android:name=".RIDEPADActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".AccountActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".MembersActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".OfferRideActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".OffersActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".RequestRideActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".RequestsActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".MyRideActivity" android:configChanges="keyboardHidden|orientation"></activity>		
+		<activity android:name=".LoginActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".MymapActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<activity android:name=".InviteFriendsActivity" android:configChanges="keyboardHidden|orientation"></activity>
+		<uses-library android:name="com.google.android.maps"></uses-library>
+		<activity android:name="RegistrationActivity"></activity>
+		<activity android:name="SimpleOptionMenu"></activity>
+		<activity android:name="AddMemberActivity"></activity>
+		<activity android:name="ListViewMembers"></activity>
+		<activity android:name="SettingsActivity"></activity>
+		<activity android:name="ListViewAccount"></activity>
+		<activity android:name="ListViewFriendRequests"></activity>
+		<activity android:name="ListViewOffersRequests"></activity>
+		<activity android:name="AboutActivity"></activity>
+			
+	</application>
+</manifest>

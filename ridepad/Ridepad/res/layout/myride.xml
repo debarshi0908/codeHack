@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeTopBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_bar_background" >
+
+            <View
+                android:id="@+id/MyFormsViewTitleTop"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/MyFormsViewTitleCenter"
+                android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_gradient_top" >
+            </View>
+
+            <View
+                android:id="@+id/MyFormsViewTitleCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true" >
+            </View>
+
+            <View
+                android:id="@+id/ViewTitlebelow "
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+                android:layout_below="@+id/MyFormsViewTitleCenter"
+                android:background="@drawable/rectangle_gradient_bottom" >
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/MyFormsRelativeIconTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/HomeTextViewTitle"
+                    style="@style/TextStyle.SingleLine.TitleBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="My Ride"
+                    android:textColor="#66FF33"
+                    android:textStyle="bold" >
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeProgressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/MyFormsRelativeTopBar" >
+
+            <TextView
+                android:id="@+id/lblmpg"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="52dp"
+                android:text="MPG:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtmpg"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="44dp"
+                android:layout_toRightOf="@+id/lblmpg"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="txtmpg_onclick"
+                android:singleLine="true"
+                android:text="Enter your car mileage"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lblprice"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblmpg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="57dp"
+                android:text="Price:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtprice"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblmpg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@id/lblprice"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="txtprice_onclick"
+                android:singleLine="true"
+                android:text="Enter Price/gallon"
+                android:clickable="true"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lbldis"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblmpg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="135dp"
+                android:text="Distance Travelled:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtdis"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblmpg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="125dp"
+                android:layout_toRightOf="@id/lbldis"
+                android:onClick="txtdis_onclick"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="20dp" android:layout_alignRight="@+id/txtmpg"/>
+
+         <!--    <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtcost"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:onClick="address_onclick"
+                android:text="Calculate" />
+
+            <Button
+                android:id="@+id/clearbtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtcost"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="25dp"
+                android:onClick="address_reset"
+                android:text="ClearAll" /> -->
+                
+            <Button android:text="Calculate Cost of Trip" 
+            android:id="@+id/butcalculate" android:layout_height="wrap_content" 
+            android:layout_width="wrap_content" 
+            android:layout_below="@+id/txtdis" 
+             android:layout_marginTop="25dp"
+            android:layout_alignRight="@+id/txtprice" 
+            android:layout_alignLeft="@+id/lbldis" android:onClick="calculate_onclick"></Button>
+            <TextView android:textColor="#ffffff" android:textSize="20dp" android:gravity="center_vertical|center_horizontal" android:singleLine="true" android:background="@drawable/rectangle_rounded_gradient" android:layout_height="40dp" android:layout_width="200dp" android:text="0" style="@style/TextStyle.SingleLine.MyFormsTitle" android:onClick="txtdis_onclick" android:id="@+id/txtresultcal" android:layout_below="@+id/butcalculate" android:layout_toRightOf="@+id/lblmpg" android:layout_marginTop="18dp" ></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+ </ScrollView>
+

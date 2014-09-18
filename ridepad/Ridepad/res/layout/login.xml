@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/MyFormsRelativeTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bar_background" >
+
+        <View
+            android:id="@+id/MyFormsViewTitleTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MyFormsViewTitleCenter"
+            android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle_gradient_top" >
+        </View>
+
+        <View
+            android:id="@+id/MyFormsViewTitleCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" >
+        </View>
+
+        <View
+            android:id="@+id/ViewTitlebelow "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+            android:layout_below="@+id/MyFormsViewTitleCenter"
+            android:background="@drawable/rectangle_gradient_bottom" >
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeIconTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+          
+            <TextView
+                android:id="@+id/HomeTextViewTitle" android:layout_toRightOf="@+id/imageView1"
+                style="@style/TextStyle.SingleLine.TitleBarBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="Login"  android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+
+        
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainlogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/MyFormsRelativeTopBar" >
+
+        <TextView
+            android:id="@+id/lblemail"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="52dp"
+            android:text="Username:"  android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="44dp"
+            android:layout_toRightOf="@id/lblemail"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter your email"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lblpwd"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblemail"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="57dp"
+            android:text="Password:"  android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lblemail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/lblpwd"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter your password"
+            android:singleLine="true"
+            android:password="true"
+            android:textSize="14dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblemail"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="100dp" >
+        </CheckBox>
+
+        <TextView
+            android:id="@+id/txtremeber"
+            style="@style/TextStyle.SingleLine.HomeItemSeperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="190dp"
+            android:layout_toRightOf="@+id/checkbox"
+            android:text="Remember my e-mail and password"  android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+       
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtpassword"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="150dp"
+            android:enabled="false"
+            android:onClick="signup_onclick"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/clearbtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtpassword"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="150dp"
+            android:onClick="login_reset"
+            android:text="Create Account" />
+    </RelativeLayout>
+   
+	<!-- <RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:id="@+id/FindFormsRelativeProgressContainer"
+		android:layout_below="@+id/txtremeber">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:id="@+id/FindFormsLinearProgress"
+			android:layout_height="wrap_content" android:layout_centerInParent="true">
+			<ProgressBar android:layout_gravity="center_horizontal"
+				android:layout_height="wrap_content" android:id="@+id/FindFormsProgressBar"
+				android:layout_width="wrap_content"></ProgressBar>
+			<TextView android:layout_height="wrap_content"
+				android:id="@+id/FindFormsTextViewProgress" android:layout_gravity="center_horizontal"
+				android:layout_width="wrap_content" android:text="@string/progress_text"></TextView>
+		</LinearLayout>
+	</RelativeLayout> -->
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	 <item android:id="@+id/icontext"
+        android:title="about"
+        android:icon="@drawable/n_about" />
+     <item android:id="@+id/icontext1"
+        android:title="Retrive password"
+        android:icon="@drawable/n_lock" /> 
+</menu>

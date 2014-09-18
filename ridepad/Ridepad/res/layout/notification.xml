@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+    <RadioButton android:text="Walmart - Prateek (Offer)" android:id="@+id/radioButton1" android:layout_width="wrap_content" android:layout_height="wrap_content"></RadioButton>
+    <RadioButton android:text="BHM - Aziz (Offer)" android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_width="254dp"></RadioButton>
+    
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:weightSum="1">
+        <Button android:layout_width="115dp" android:text="Accept" android:id="@+id/button1" android:layout_height="wrap_content" android:layout_weight="0.12"></Button>
+        <Button android:layout_width="wrap_content" android:text="Decline" android:id="@+id/button2" android:layout_height="wrap_content" android:layout_weight="0.55"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

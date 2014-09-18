@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+     <item android:id="@+id/ride_reset"
+        android:title="reset"
+        android:icon="@drawable/n_refresh" />
+     <item android:id="@+id/ride_map"
+        android:title="map"
+        android:icon="@drawable/n_map" /> 
+     <item android:id="@+id/ride_home"
+        android:title="home"
+        android:icon="@drawable/n_home" /> 
+    
+</menu>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<RelativeLayout android:layout_alignParentTop="true"
+		android:id="@+id/MyFormsRelativeTopBar" android:layout_width="fill_parent"
+		android:layout_height="@dimen/title_bar_height" android:background="@color/title_bar_background">
+		<View android:layout_above="@+id/MyFormsViewTitleCenter"
+			android:id="@+id/MyFormsViewTitleTop" android:layout_width="fill_parent"
+			android:background="@drawable/rectangle_gradient_top"
+			android:layout_alignParentTop="true" android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/MyFormsViewTitleCenter"></View>
+		<View android:layout_width="wrap_content"
+			android:layout_centerVertical="true" android:id="@+id/MyFormsViewTitleCenter"
+			android:layout_height="0dp"></View>
+		<View android:layout_below="@+id/MyFormsViewTitleCenter"
+			android:id="@+id/ViewTitlebelow " android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+			android:background="@drawable/rectangle_gradient_bottom"></View>
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/MyFormsRelativeIconTitle"
+			android:layout_centerInParent="true">
+			<TextView android:layout_centerHorizontal="true"
+				android:layout_marginBottom="20dp" android:id="@+id/HomeTextViewTitle"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:text="MY RIDE" style="@style/TextStyle.SingleLine.TitleBarBig"  android:textColor="#66FF33"
+                android:textStyle="bold"></TextView>
+		</RelativeLayout>
+	</RelativeLayout>
+	
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_below="@+id/MyFormsRelativeTopBar"
+		android:id="@+id/MyFormsRelativeProgressContainer">
+		<EditText android:layout_width="wrap_content" android:layout_below="@+id/textView2" android:layout_alignLeft="@+id/pricepgtxt" android:layout_marginTop="16dp" android:layout_alignRight="@+id/pricepgtxt" android:id="@+id/milestxt" android:layout_height="40dp"></EditText>
+		<EditText android:layout_width="wrap_content" android:id="@+id/mpgtxt" android:layout_alignBaseline="@+id/textView1" android:layout_alignBottom="@+id/textView1" android:layout_alignRight="@+id/sendquerybtn" android:layout_alignLeft="@+id/totalcosttxt" android:layout_height="40dp" android:hint="Enter the Mile Per Gallon"></EditText>
+		
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="19dp"
+			android:layout_marginLeft="5dp" android:text="MPG:"
+			style="@style/TextStyle.SingleLine.MyFormsTitle" android:id="@+id/textView1"/>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="92dp"
+			android:layout_marginLeft="5dp" android:text="Price/Gallon:"
+			style="@style/TextStyle.SingleLine.MyFormsTitle" android:id="@+id/textView2"/>
+		<Button android:id="@+id/clearbtn" android:layout_below="@id/totalcosttxt"
+			android:layout_marginLeft="10dp" android:layout_marginTop="45dp"
+			android:layout_height="wrap_content" android:layout_width="140dp"
+			android:text="Calculate" android:onClick="car_onclick" />
+		<Button android:id="@+id/sendquerybtn" android:layout_below="@id/totalcosttxt"
+			android:layout_marginLeft="170dp" android:layout_marginTop="45dp"
+			android:layout_height="wrap_content" android:layout_width="140dp"
+			android:text="Clear" android:onClick="car_reset" />
+		<EditText android:layout_width="wrap_content" android:layout_alignBottom="@+id/textView2" android:layout_alignLeft="@+id/mpgtxt" android:layout_alignRight="@+id/mpgtxt" android:id="@+id/pricepgtxt" android:layout_height="40dp" android:hint="Enter the Price/Gallon">
+			<requestFocus></requestFocus>
+		</EditText>
+				<TextView android:layout_width="wrap_content" android:text="Total Cost:" android:id="@+id/lblmileage" style="@style/TextStyle.SingleLine.MyFormsTitle" android:layout_height="wrap_content" android:layout_alignTop="@+id/totalcosttxt" android:layout_alignLeft="@+id/textView3"></TextView>
+				<EditText android:layout_width="225dp" android:background="@android:drawable/editbox_background" android:id="@+id/totalcosttxt" android:textSize="14dp" android:layout_height="40dp" android:singleLine="true" android:layout_below="@+id/milestxt" android:layout_alignParentRight="true" android:layout_marginTop="26dp"></EditText>
+				<TextView android:layout_width="fill_parent" android:text="Distance:" android:id="@+id/textView3" style="@style/TextStyle.SingleLine.MyFormsTitle" android:layout_height="wrap_content" android:layout_above="@+id/totalcosttxt" android:layout_alignParentLeft="true"></TextView>
+	</RelativeLayout>
+</RelativeLayout>
+	        

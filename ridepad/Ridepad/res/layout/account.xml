@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeTopBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_bar_background" >
+
+            <View
+                android:id="@+id/MyFormsViewTitleTop"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/MyFormsViewTitleCenter"
+                android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle_gradient_top" >
+            </View>
+
+            <View
+                android:id="@+id/MyFormsViewTitleCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true" >
+            </View>
+
+            <View
+                android:id="@+id/ViewTitlebelow "
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+                android:layout_below="@+id/MyFormsViewTitleCenter"
+                android:background="@drawable/rectangle_gradient_bottom" >
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/MyFormsRelativeIconTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/HomeTextViewTitle"
+                    style="@style/TextStyle.SingleLine.TitleBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="My Account"
+                    android:textColor="#66FF33"
+                    android:textStyle="bold" >
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeProgressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/MyFormsRelativeTopBar" >
+
+            <TextView
+                android:id="@+id/lblstreet"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="52dp"
+                android:text="Street:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtstreet"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="46dp"
+                android:layout_toRightOf="@+id/lblstreet"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="txtstr_onclick"
+                android:singleLine="true"
+                android:text="Enter Street Address"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lblcity"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblstreet"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="57dp"
+                android:text="City:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtcity"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblstreet"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="52dp"
+                android:layout_toRightOf="@id/lblcity"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="txtcity_onclick"
+                android:singleLine="true"
+                android:text="Enter City"
+                android:clickable="true"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lblstate"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblstreet"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="135dp"
+                android:text="State:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtstate"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblstreet"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="125dp"
+                android:layout_toRightOf="@id/lblstate"
+                android:onClick="txtstate_onclick"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:singleLine="true"
+                android:clickable="true"
+                android:text="Enter State"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lblzipcode"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblstreet"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="210dp"
+                android:text="ZipCode:"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtzipcode"
+                style="@style/TextStyle.SingleLine.MyFormsTitle"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblstreet"
+                android:onClick="txtzipcode_onclick"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="200dp"
+                android:layout_toRightOf="@id/lblzipcode"
+                android:background="@drawable/rectangle_rounded_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:singleLine="true"
+                android:text="Enter Zipcode"
+                android:clickable="true"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtzipcode"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:onClick="address_onclick"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/clearbtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtzipcode"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="25dp"
+                android:onClick="address_reset"
+                android:text="ClearAll" />
+        </RelativeLayout>
+    </RelativeLayout>
+ </ScrollView>
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/MyFormsRelativeTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bar_background" >
+
+        <View
+            android:id="@+id/MyFormsViewTitleTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MyFormsViewTitleCenter"
+            android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle_gradient_top" >
+        </View>
+
+        <View
+            android:id="@+id/MyFormsViewTitleCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" >
+        </View>
+
+        <View
+            android:id="@+id/ViewTitlebelow "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+            android:layout_below="@+id/MyFormsViewTitleCenter"
+            android:background="@drawable/rectangle_gradient_bottom" >
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeIconTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/HomeTextViewTitle"
+                style="@style/TextStyle.SingleLine.TitleBarBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="Registration" android:textColor="#66FF33"
+                android:textStyle="bold">
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainlogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/MyFormsRelativeTopBar" >
+
+        <TextView
+            android:id="@+id/lblemail"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="52dp"
+            android:text="Username:" android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="44dp"
+            android:layout_toRightOf="@id/lblemail"
+            android:background="@android:drawable/editbox_background"
+            android:hint="abc@xyz.com"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lblpwd"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblemail"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="57dp"
+            android:text="Password:" android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lblemail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/lblpwd"
+            android:background="@android:drawable/editbox_background"
+            android:hint="****"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lblname"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblpwd"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="57dp"
+            android:text="Name:" android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtname"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lblpwd"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/lblname"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter your full name"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lblph"
+            style="@style/TextStyle.SingleLine.MyFormsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblname"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="57dp"
+            android:text="Phone No:" android:textColor="#66FF33"
+                android:textStyle="bold" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtph"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lblname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/lblph"
+            android:background="@android:drawable/editbox_background"
+            android:hint="123-456-7890"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/submitbtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtph"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"           
+            android:onClick="regis_onclick"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/clearbtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtph"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="40dp"
+            android:onClick="regis_reset"
+            android:text="Clear" />
+    </RelativeLayout>
+
+   
+</RelativeLayout>
+ </ScrollView>

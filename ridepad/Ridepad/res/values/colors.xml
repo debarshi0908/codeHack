@@ -1,0 +1,11 @@
+<resources>
+	<color name="title_bar_background">#ff0c0c0c</color>
+	<color name="list_seperator_background">#ff666666</color>
+	<color name="about_background">#cc000000</color>
+	<color name="queries_list_bg">#cc000000</color>
+	<color name="light_text_primary">#ffeeeeee</color>
+	<color name="light_text_secondary">#ffdddddd</color>
+	<color name="light_text_third">#ffaaaaaa</color>
+	<color name="gridview_black">#ffffffff</color>
+    <color name="green_textcolor">#66ff3333</color>
+</resources>

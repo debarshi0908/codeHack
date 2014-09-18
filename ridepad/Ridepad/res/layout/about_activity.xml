@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/AboutRelativeTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bar_background" >
+
+        <View
+            android:id="@+id/MyFormsViewTitleTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/MyFormsViewTitleCenter"
+            android:layout_alignBottom="@+id/MyFormsViewTitleCenter"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle_gradient_top" >
+        </View>
+
+        <View
+            android:id="@+id/MyFormsViewTitleCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" >
+        </View>
+
+        <View
+            android:id="@+id/ViewTitlebelow "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/MyFormsViewTitleCenter"
+            android:layout_below="@+id/MyFormsViewTitleCenter"
+            android:background="@drawable/rectangle_gradient_bottom" >
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/MyFormsRelativeIconTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/HomeTextViewTitle"
+                style="@style/TextStyle.SingleLine.TitleBarBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="About"
+                android:textColor="#66FF33"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/MyFormsRelativeProgressContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/AboutRelativeTopBar" >
+
+   <TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:id="@+id/AboutTextViewMessage"
+				style="@style/TextStyle.AboutText" android:text="@string/about_text"></TextView>
+
+</RelativeLayout>
+</RelativeLayout>
