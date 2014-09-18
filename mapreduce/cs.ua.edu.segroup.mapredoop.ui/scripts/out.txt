@@ -1,0 +1,4 @@
+Running Hadoop instances:
+INSTANCE	i-a188b3cd	ami-fa6a8e93	ec2-50-16-93-73.compute-1.amazonaws.com	ip-10-112-35-194.ec2.internal	running	gsg-keypair	0		m1.small	2011-03-03T15:42:30+0000	us-east-1b	aki-a71cf9ce	ari-a51cf9cc		monitoring-disabled	50.16.93.73	10.112.35.194			instance-store					paravirtual	xen	
+INSTANCE	i-578db63b	ami-fa6a8e93	ec2-50-17-28-20.compute-1.amazonaws.com	ip-10-204-61-209.ec2.internal	running	gsg-keypair	0		m1.small	2011-03-03T15:45:27+0000	us-east-1b	aki-a71cf9ce	ari-a51cf9cc		monitoring-disabled	50.17.28.20	10.204.61.209			instance-store					paravirtual	xen	
+INSTANCE	i-518db63d	ami-fa6a8e93	ec2-67-202-41-220.compute-1.amazonaws.com	ip-10-118-253-175.ec2.internal	running	gsg-keypair	1		m1.small	2011-03-03T15:45:27+0000	us-east-1b	aki-a71cf9ce	ari-a51cf9cc		monitoring-disabled	67.202.41.220	10.118.253.175			instance-store					paravirtual	xen	

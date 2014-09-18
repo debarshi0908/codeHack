@@ -1,0 +1,46 @@
+grammar cs.ua.edu.se.MapRedoop with org.eclipse.xtext.common.Terminals
+
+generate mapRedoop "http://www.ua.cs/edu/se/MapRedoop"
+
+
+ 
+
+MapRedoop :declaration=Declaration'{'(content+=Content)*'}' ;
+
+Content: entities=ListofEntities|mrBlocks=MRBlock;
+
+ListofEntities:{ListofEntities}'{'(entities+=Entity)*'}'; 
+
+MRBlock:mapper=Mapper reducer=Reducer;
+
+Declaration :
+'program' name=ID ('extend' superName=ID)?;
+
+
+Mapper:
+ 'map('inkey=Argument','invalue=Argument ',' outkey=Argument ','outvalue=Argument')'Block;
+ 
+Argument:
+type=Type argname=ID;
+ 
+Reducer: 'reduce(' outkey=Argument ','outvalue=Argument')'Block;
+  
+Type:
+  type='int'|type='float'|type='double'|type='text'|type='long' | name=ID ;
+  
+ 
+Entity:
+  'metaelement' name=ID ('extend' superType=[Entity])? '{'(features+=Feature)+ '}';
+ 
+Feature:
+    type=TypeRef name=ID';'| ReadorWrite';';
+    
+ReadorWrite:
+'read'  readval=STRING| 'write' writeval=STRING;
+  
+TypeRef:
+  referenced=Type(multi?='*')?;
+
+terminal Block :  
+'[' -> ']'; 
+  
